@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/funkygao/actor/actor"
-	"github.com/funkygao/golib/locking"
-	"github.com/funkygao/golib/server"
-	"github.com/funkygao/golib/signal"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/actor/actor"
+	"github.com/nicholaskh/golib/locking"
+	"github.com/nicholaskh/golib/server"
+	"github.com/nicholaskh/golib/signal"
+	log "github.com/nicholaskh/log4go"
 	"math/rand"
 	"os"
 	"runtime/debug"

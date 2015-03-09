@@ -1,7 +1,7 @@
 package config
 
 import (
-	conf "github.com/funkygao/jsconf"
+	conf "github.com/nicholaskh/jsconf"
 )
 
 type ConfigWorker struct {

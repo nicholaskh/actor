@@ -1,7 +1,7 @@
 package actor
 
 import (
-	log "github.com/funkygao/log4go"
+	log "github.com/nicholaskh/log4go"
 	"github.com/kr/beanstalk"
 	"time"
 )

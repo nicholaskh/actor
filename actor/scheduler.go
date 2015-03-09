@@ -1,8 +1,8 @@
 package actor
 
 import (
-	"github.com/funkygao/actor/config"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/actor/config"
+	log "github.com/nicholaskh/log4go"
 	"time"
 )
 

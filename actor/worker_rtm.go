@@ -1,10 +1,10 @@
 package actor
 
 import (
-	"github.com/funkygao/actor/config"
-	"github.com/funkygao/golib/idgen"
-	log "github.com/funkygao/log4go"
-	"github.com/funkygao/metrics"
+	"github.com/nicholaskh/actor/config"
+	"github.com/nicholaskh/golib/idgen"
+	log "github.com/nicholaskh/log4go"
+	"github.com/nicholaskh/metrics"
 	"math/rand"
 	"strconv"
 	"sync"

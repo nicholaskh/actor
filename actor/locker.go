@@ -1,8 +1,8 @@
 package actor
 
 import (
-	"github.com/funkygao/lockkey"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/lockkey"
+	log "github.com/nicholaskh/log4go"
 )
 
 type Locker []string

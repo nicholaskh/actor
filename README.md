@@ -17,10 +17,10 @@ actor
     export GOPATH=~/gopkg
 
     # install actor package
-    go get github.com/funkygao/dragon
+    go get github.com/nicholaskh/actor
 
     # change dir to actor package
-    cd $GOPATH/src/github.com/funkygao/dragon
+    cd $GOPATH/src/github.com/nicholaskh/actor
 
     # install all dependencies
     go get ./... 

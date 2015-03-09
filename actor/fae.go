@@ -1,11 +1,11 @@
 package actor
 
 import (
-	"github.com/funkygao/fae/config"
-	"github.com/funkygao/fae/servant/gen-go/fun/rpc"
-	"github.com/funkygao/fae/servant/proxy"
-	"github.com/funkygao/golib/ip"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/fae/config"
+	"github.com/nicholaskh/fae/servant/gen-go/fun/rpc"
+	"github.com/nicholaskh/fae/servant/proxy"
+	"github.com/nicholaskh/golib/ip"
+	log "github.com/nicholaskh/log4go"
 	"strconv"
 	"sync/atomic"
 )

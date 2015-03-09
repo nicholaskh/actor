@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	conf "github.com/funkygao/jsconf"
+	conf "github.com/nicholaskh/jsconf"
 )
 
 type ConfigBeanstalk struct {

@@ -2,9 +2,9 @@ package actor
 
 import (
 	"fmt"
-	"github.com/funkygao/actor/config"
-	log "github.com/funkygao/log4go"
-	"github.com/funkygao/metrics"
+	"github.com/nicholaskh/actor/config"
+	log "github.com/nicholaskh/log4go"
+	"github.com/nicholaskh/metrics"
 	"io/ioutil"
 	"math/rand"
 	"net"

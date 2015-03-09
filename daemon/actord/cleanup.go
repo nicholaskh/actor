@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/funkygao/golib/locking"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/golib/locking"
+	log "github.com/nicholaskh/log4go"
 	"os"
 )
 

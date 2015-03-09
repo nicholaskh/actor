@@ -3,9 +3,9 @@ package actor
 import (
 	"github.com/fate2013/go-rtm/proxy"
 	"github.com/fate2013/go-rtm/servergated"
-	"github.com/funkygao/actor/config"
-	"github.com/funkygao/golib/pool"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/actor/config"
+	"github.com/nicholaskh/golib/pool"
+	log "github.com/nicholaskh/log4go"
 	"sync/atomic"
 	"time"
 )

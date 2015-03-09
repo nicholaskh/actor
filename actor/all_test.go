@@ -2,8 +2,8 @@ package actor
 
 import (
 	"encoding/json"
-	"github.com/funkygao/assert"
-	"github.com/funkygao/golib/breaker"
+	"github.com/nicholaskh/assert"
+	"github.com/nicholaskh/golib/breaker"
 	"strings"
 	"sync"
 	"testing"

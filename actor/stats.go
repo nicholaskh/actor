@@ -1,10 +1,10 @@
 package actor
 
 import (
-	"github.com/funkygao/golib/gofmt"
-	"github.com/funkygao/golib/server"
-	log "github.com/funkygao/log4go"
-	"github.com/funkygao/metrics"
+	"github.com/nicholaskh/golib/gofmt"
+	"github.com/nicholaskh/golib/server"
+	log "github.com/nicholaskh/log4go"
+	"github.com/nicholaskh/metrics"
 	"github.com/gorilla/mux"
 	"io"
 	logger "log"

@@ -2,10 +2,10 @@ package actor
 
 import (
 	"database/sql"
-	"github.com/funkygao/actor/config"
-	"github.com/funkygao/golib/breaker"
-	log "github.com/funkygao/log4go"
-	"github.com/funkygao/metrics"
+	"github.com/nicholaskh/actor/config"
+	"github.com/nicholaskh/golib/breaker"
+	log "github.com/nicholaskh/log4go"
+	"github.com/nicholaskh/metrics"
 	_ "github.com/go-sql-driver/mysql"
 	"time"
 )

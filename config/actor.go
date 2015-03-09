@@ -1,9 +1,9 @@
 package config
 
 import (
-	"github.com/funkygao/golib/ip"
-	conf "github.com/funkygao/jsconf"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/golib/ip"
+	conf "github.com/nicholaskh/jsconf"
+	log "github.com/nicholaskh/log4go"
 	"strings"
 	"time"
 )

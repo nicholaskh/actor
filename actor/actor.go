@@ -19,10 +19,10 @@
 package actor
 
 import (
-	"github.com/funkygao/actor/config"
-	"github.com/funkygao/etclib"
-	"github.com/funkygao/golib/server"
-	log "github.com/funkygao/log4go"
+	"github.com/nicholaskh/actor/config"
+	"github.com/nicholaskh/etclib"
+	"github.com/nicholaskh/golib/server"
+	log "github.com/nicholaskh/log4go"
 )
 
 type Actor struct {

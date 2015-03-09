@@ -2,9 +2,9 @@ package actor
 
 import (
 	"github.com/fate2013/pubnub-go/messaging"
-	"github.com/funkygao/actor/config"
-	log "github.com/funkygao/log4go"
-	"github.com/funkygao/metrics"
+	"github.com/nicholaskh/actor/config"
+	log "github.com/nicholaskh/log4go"
+	"github.com/nicholaskh/metrics"
 	"sync"
 
 	"time"
