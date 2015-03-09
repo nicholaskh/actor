@@ -1,0 +1,105 @@
+#!/bin/sh
+#
+# Startup / shutdown script for the actor daemon
+#
+# Copyright (c) 2011, FunPlus, Inc.
+# All rights reserved
+#
+#
+### BEGIN INIT INFO
+# Provides:          actord
+# Required-Start:    $network $local_fs
+# Required-Stop:
+# Should-Start:      $named
+# Should-Stop:
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    actor daemon
+# Description:          actor daemon
+
+### END INIT INFO
+
+. /etc/init.d/functions
+
+if [ "$(id -u)" != "0" ]; then
+    echo "Must run as root"
+    exit 1
+fi
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+ACTOR_HOME=/sgn/app/actor
+DAEMON=$ACTOR_HOME/bin/actord
+PIDFILE=$ACTOR_HOME/var/actord.pid
+CONFIGFILE=$ACTOR_HOME/etc/actord.cf
+LOGFILE=$ACTOR_HOME/var/actord.log
+CRASHLOG=$ACTOR_HOME/panic.dump
+LOCKFILE=$ACTOR_HOME/var/actord.lock
+
+test -f $DAEMON || exit 0
+test -f $CONFIGFILE || exit 0
+
+# Otherwise, RHEL (and apparently Fedora) tries to "help" and set soft
+# limit of core file size to 0 for daemons. It's done as part of
+# daemon shell function shortly after changing user. See MB-6601
+DAEMON_COREFILE_LIMIT=unlimited
+
+start() {
+    touch $PIDFILE 
+    cd $ACTOR_HOME
+    ulimit -n 40960
+    ulimit -c unlimited
+    ulimit -l unlimited
+    daemon --pidfile PIDFILE "/usr/sbin/daemonize $DAEMON -conf $CONFIGFILE -crashlog $CRASHLOG -log $LOGFILE -lockfile $LOCKFILE -level trace"
+    errcode=$?
+    return $errcode
+}
+
+stop() {
+    daemon "$DAEMON -k -lockfile $LOCKFILE -conf $CONFIGFILE"
+    errcode=$?
+    return $errcode
+}
+
+running() {
+    pidofproc -p $PIDFILE $DAEMON >/dev/null
+    errcode=$?
+    return $errcode
+}
+
+case $1 in
+    start)
+        if running ; then
+            warning && echo "actor-daemon is already started"
+            exit 0
+        fi
+        echo -n $"Starting actor-daemon"
+        start
+        echo
+        ;;
+    stop)
+        echo -n $"Stopping actor-daemon"
+        stop
+        echo
+        ;;
+    restart)
+        echo -n $"Stopping actor-daemon"
+        stop
+        echo
+        echo -n $"Starting actor-daemon"
+        start
+        echo
+        ;;
+    status)
+        if running ; then
+            echo "actor-daemon is running"
+            exit 0
+        else
+            echo "actor-daemon is not running"
+            exit 3
+        fi
+        ;;
+    *)
+        echo "Usage: /etc/init.d/actord {start|stop|restart|status}" >&2
+        exit 3
+esac
